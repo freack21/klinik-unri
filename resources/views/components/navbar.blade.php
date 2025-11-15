@@ -14,7 +14,7 @@
                 <a href="{{ route('landingpage.berita') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Berita</a>
                 <a href="#" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Jadwal Dokter</a>
                 <a href="{{ route('landingpage.layanan') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Layanan</a>
-                <a href="#" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Kontak</a>
+                <a href="{{ route('landingpage.kontak') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Kontak</a>
             </div>
 
             <!-- Hamburger (Mobile) -->
@@ -37,7 +37,7 @@
             <a href="{{ route('landingpage.berita') }}" class="px-4 py-2 hover:bg-gray-50">Berita</a>
             <a href="#" class="px-4 py-2 hover:bg-gray-50">Jadwal Dokter</a>
             <a href="{{ route('landingpage.layanan') }}" class="px-4 py-2 hover:bg-gray-50">Layanan</a>
-            <a href="#" class="px-4 py-2 hover:bg-gray-50">Kontak</a>
+            <a href="{{ route('landingpage.kontak') }}" class="px-4 py-2 hover:bg-gray-50">Kontak</a>
         </div>
     </div>
 </nav>

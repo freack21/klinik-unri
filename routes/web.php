@@ -10,6 +10,7 @@ use App\Livewire\LandingPage\Layanan;
 use App\Livewire\LandingPage\LihatBerita;
 use App\Livewire\LandingPage\LihatLayanan;
 use App\Livewire\LandingPage\LihatSemuaBerita;
+use App\Livewire\LandingPage\Kontak;
 
 Route::get('/', Profile::class)->name('landingpage.profile');
 
@@ -22,3 +23,5 @@ Route::get('/berita/{id}', LihatBerita::class)->name('landingpage.lihat-berita')
 
 Route::get('/layanan', Layanan::class)->name('landingpage.layanan');
 Route::get('/layanan/{id}', LihatLayanan::class)->name('landingpage.lihat-layanan');
+
+Route::get('/kontak', Kontak::class)->name('landingpage.kontak');
