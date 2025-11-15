@@ -25,6 +25,8 @@
 
     {{ $slot }}
 
+    <x-footer />
+
     @livewireScripts
 
     <script>
