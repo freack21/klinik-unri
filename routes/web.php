@@ -6,6 +6,7 @@ use App\Livewire\LandingPage\Pengumuman;
 use App\Livewire\LandingPage\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\LandingPage\Berita;
+use App\Livewire\LandingPage\JadwalDokter;
 use App\Livewire\LandingPage\Layanan;
 use App\Livewire\LandingPage\LihatBerita;
 use App\Livewire\LandingPage\LihatLayanan;
@@ -25,3 +26,5 @@ Route::get('/layanan', Layanan::class)->name('landingpage.layanan');
 Route::get('/layanan/{id}', LihatLayanan::class)->name('landingpage.lihat-layanan');
 
 Route::get('/kontak', Kontak::class)->name('landingpage.kontak');
+
+Route::get('/jadwal-dokter', JadwalDokter::class)->name('landingpage.jadwal-dokter');

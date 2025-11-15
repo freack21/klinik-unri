@@ -12,7 +12,7 @@
                 <a href="{{ route('landingpage.profile') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Profil</a>
                 <a href="{{ route('landingpage.pengumuman') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Pengumuman</a>
                 <a href="{{ route('landingpage.berita') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Berita</a>
-                <a href="#" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Jadwal Dokter</a>
+                <a href="{{ route('landingpage.jadwal-dokter') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Jadwal Dokter</a>
                 <a href="{{ route('landingpage.layanan') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Layanan</a>
                 <a href="{{ route('landingpage.kontak') }}" class="hover:text-gray-600 border-b-2 border-transparent hover:border-gray-500 transition-all duration-500">Kontak</a>
             </div>
@@ -35,7 +35,7 @@
             <a href="{{ route('landingpage.profile') }}" class="px-4 py-2 hover:bg-gray-50">Profil</a>
             <a href="{{ route('landingpage.pengumuman') }}" class="px-4 py-2 hover:bg-gray-50">Pengumuman</a>
             <a href="{{ route('landingpage.berita') }}" class="px-4 py-2 hover:bg-gray-50">Berita</a>
-            <a href="#" class="px-4 py-2 hover:bg-gray-50">Jadwal Dokter</a>
+            <a href="{{ route('landingpage.jadwal-dokter') }}" class="px-4 py-2 hover:bg-gray-50">Jadwal Dokter</a>
             <a href="{{ route('landingpage.layanan') }}" class="px-4 py-2 hover:bg-gray-50">Layanan</a>
             <a href="{{ route('landingpage.kontak') }}" class="px-4 py-2 hover:bg-gray-50">Kontak</a>
         </div>

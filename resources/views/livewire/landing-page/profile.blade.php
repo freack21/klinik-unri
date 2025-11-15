@@ -75,9 +75,9 @@
                 @endforeach
             </div>
 
-            <button class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition">
+            <a href="{{ route('landingpage.jadwal-dokter') }}" class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition block w-fit mx-auto">
                 Selengkapnya →
-            </button>
+            </a>
         </div>
     </section>
 
@@ -102,9 +102,9 @@
                 </div>
             </div>
 
-            <button class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition">
+            <a href="{{ route('landingpage.layanan') }}" class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition block w-fit mx-auto">
                 Selengkapnya →
-            </button>
+            </a>
         </div>
     </section>
 
@@ -124,9 +124,9 @@
                 @endfor
             </div>
 
-            <button class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition">
+            <a href="{{ route('landingpage.berita') }}" class="mt-8 border border-gray-800 px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition block w-fit mx-auto">
                 Selengkapnya →
-            </button>
+            </a>
         </div>
     </section>
 </div>
