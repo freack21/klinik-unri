@@ -1,6 +1,6 @@
 <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
     {{-- Sidebar --}}
-    <aside class="md:col-span-1 bg-gray-100 rounded-xl p-6 shadow-sm">
+    <aside class="md:col-span-1 bg-gray-100 rounded-xl p-6 shadow-sm" data-aos="fade-right">
         <img src="{{ asset('img/banner-berita.png') }}" alt="Banner" class="rounded-lg mb-6">
         <div class="mb-6">
             <h3 class="font-semibold text-gray-800 mb-2">Informasi & Pendaftaran</h3>
@@ -31,7 +31,7 @@
     </aside>
 
     {{-- Main Content --}}
-    <main class="md:col-span-2 bg-white rounded-xl shadow-sm p-8">
+    <main class="md:col-span-2 bg-white rounded-xl shadow-sm p-8" data-aos="fade-left" data-aos-delay="200">
         @if ($pengumuman)
             <h1 class="text-2xl font-bold text-gray-900 mb-2">{{ strtoupper($pengumuman['judul']) }}</h1>
             <p class="text-gray-600 text-sm mb-6">{{ $pengumuman['tanggal'] }}</p>

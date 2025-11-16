@@ -1,7 +1,7 @@
 <div class="min-h-screen pt-8">
 
     {{-- Search Bar --}}
-    <div class="max-w-3xl mx-auto px-6">
+    <div class="max-w-3xl mx-auto px-6" data-aos="fade-down">
         <div class="relative">
             <input
                 type="text"
@@ -15,11 +15,11 @@
 
     {{-- HEAD NEWS --}}
     <div class="max-w-7xl mx-auto px-6 mt-12">
-        <h2 class="text-4xl font-extrabold text-red-800 tracking-tight">
+        <h2 class="text-4xl font-extrabold text-red-800 tracking-tight" data-aos="fade-right">
             HEAD NEWS
         </h2>
 
-        <div class="relative mt-6">
+        <div class="relative mt-6" data-aos="zoom-in" data-aos-delay="200">
             <img src="{{ asset($headNews['gambar']) }}" class="w-full h-[330px] object-cover rounded-3xl shadow-lg">
 
             <div class="absolute inset-0 bg-black/40 rounded-3xl"></div>
@@ -41,7 +41,7 @@
 
     {{-- LATEST NEWS --}}
     <div class="max-w-7xl mx-auto px-6 my-16">
-        <div class="flex justify-between items-end">
+        <div class="flex justify-between items-end" data-aos="fade-up">
             <h2 class="text-3xl font-bold text-gray-900 tracking-tight">
                 LATEST NEWS
             </h2>
@@ -53,8 +53,8 @@
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
 
-            @foreach ($latestNews as $news)
-                <a href="{{ route('landingpage.lihat-berita', ['id' => $news['id']]) }}" class="bg-white rounded-3xl shadow-md hover:shadow-lg transition duration-200 hover:scale-105 hover:shadow-gray-500">
+            @foreach ($latestNews as $index => $news)
+                <a href="{{ route('landingpage.lihat-berita', ['id' => $news['id']]) }}" class="bg-white rounded-3xl shadow-md hover:shadow-lg transition duration-200 hover:scale-105 hover:shadow-gray-500" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
                     <img src="{{ asset($news['gambar']) }}"
                          class="w-full h-48 object-cover rounded-2xl">
 

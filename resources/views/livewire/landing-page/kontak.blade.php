@@ -3,8 +3,8 @@
     {{-- HEADER --}}
     <div class="bg-[#A5D7D2] py-16">
         <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Contact Us</h1>
-            <p class="text-gray-700 mt-4 text-lg">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900" data-aos="fade-down">Contact Us</h1>
+            <p class="text-gray-700 mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">
                 Kami siap melayani dan menjawab pertanyaan Anda. Silakan kunjungi lokasi kami <br>
                 atau kirim pesan melalui formulir di bawah.
             </p>
@@ -19,7 +19,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
                 {{-- Waktu Pelayanan --}}
-                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center">
+                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex justify-center mb-4">
                         <x-heroicon-s-clock class="w-10 h-10 text-teal-600"/>
                     </div>
@@ -28,7 +28,7 @@
                 </div>
 
                 {{-- Telepon --}}
-                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center">
+                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex justify-center mb-4">
                         <x-heroicon-s-phone class="w-10 h-10 text-teal-600"/>
                     </div>
@@ -37,7 +37,7 @@
                 </div>
 
                 {{-- WhatsApp --}}
-                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center">
+                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex justify-center mb-4">
                         <x-heroicon-s-chat-bubble-left-right class="w-10 h-10 text-teal-600"/>
                     </div>
@@ -46,7 +46,7 @@
                 </div>
 
                 {{-- Email --}}
-                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center">
+                <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex justify-center mb-4">
                         <x-heroicon-s-envelope class="w-10 h-10 text-teal-600"/>
                     </div>
@@ -57,7 +57,7 @@
             </div>
 
             {{-- KANAN – MAP --}}
-            <div>
+            <div data-aos="fade-left" data-aos-delay="200">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6584847896!2d101.35824631475395!3d0.4637899997396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a8f3e1e1e1e1%3A0x1e1e1e1e1e1e1e1e!2sUniversitas%20Riau!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid"
                     width="100%"
