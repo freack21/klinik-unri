@@ -37,7 +37,7 @@
 
             <!-- Tabs -->
             <div class="flex bg-gray-200 rounded-lg p-1 mb-6">
-                <button class="flex-1 py-2 px-4 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700">Pengguna Layanan</button>
+                <!-- <button class="flex-1 py-2 px-4 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700">Pengguna Layanan</button> -->
                 <button class="flex-1 py-2 px-4 rounded-md text-sm font-medium bg-green-600 text-white shadow-sm">Staf klinik</button>
             </div>
 
