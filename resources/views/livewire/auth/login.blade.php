@@ -4,8 +4,8 @@
         <div class="w-full md:w-1/2 bg-gradient-to-br from-green-500 to-green-600 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden">
             <!-- Background Pattern (Optional/Simulated) -->
             <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            
-            <div class="z-10 text-center">
+
+            <div class="z-10 text-center flex flex-col justify-center items-center">
                 <div class="bg-white h-36 w-36 rounded-full flex justify-center items-center mb-4 shadow-lg">
                      <!-- Replace with actual logo path if available, using placeholder for now -->
                     <img src="{{ asset('img/logo-klinik.png') }}" alt="UNRI Logo" class="h-32 w-32 object-contain">
