@@ -34,10 +34,10 @@
     <main class="md:col-span-2 bg-white rounded-xl shadow-sm p-8" data-aos="fade-left" data-aos-delay="200">
         @if ($pengumuman)
             <h1 class="text-2xl font-bold text-gray-900 mb-2">{{ strtoupper($pengumuman['judul']) }}</h1>
-            <p class="text-gray-600 text-sm mb-6">{{ $pengumuman['tanggal'] }}</p>
+            <p class="text-gray-600 text-sm mb-6">{{ \Carbon\Carbon::parse($pengumuman['tanggal'])->format('d F Y') }}</p>
 
             <div class="prose max-w-none text-gray-800 text-justify leading-relaxed">
-                {!! $pengumuman['konten'] !!}
+                {!! $pengumuman['isi'] !!}
             </div>
 
             <div class="mt-8">

@@ -50,17 +50,16 @@
     {{-- Announcement Cards --}}
     <section class="py-12 bg-gray-50 w-full">
         <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            @php($pengumuman = App\Livewire\LandingPage\Pengumuman::$pengumumanList ?? null)
             @forelse ($pengumuman as $index => $p)
                 <div class="bg-gray-100 rounded-xl shadow-sm p-6 relative hover:shadow-md transition" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
                     <div class="absolute top-0 left-0 w-full h-2 bg-green-500 rounded-t-xl"></div>
                     <div class="mt-3 flex items-center text-sm text-gray-600 font-medium">
                         <x-heroicon-s-calendar class="w-4 h-4 mr-2 text-gray-700" />
-                        {{ $p['tanggal'] }}
+                        {{ \Carbon\Carbon::parse($p['tanggal'])->format('d F Y') }}
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-gray-800">{{ $p['judul'] }}</h3>
                     {{-- <p class="mt-2 text-sm text-gray-600">Kini tersedia vaksin Influenza untuk umum</p> --}}
-                    <a href="{{ route('landingpage.lihat-pengumuman', ['id' => $index]) }}"
+                    <a href="{{ route('landingpage.lihat-pengumuman', ['id' => $p['id']]) }}"
                         class="mt-4 block w-fit cursor-pointer bg-teal-600 text-white px-4 py-2 rounded-md font-medium hover:bg-teal-700 transition">
                         Lihat Selengkapnya
                     </a>

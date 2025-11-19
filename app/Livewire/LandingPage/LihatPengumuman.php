@@ -12,7 +12,7 @@ class LihatPengumuman extends Component
     public function mount($id)
     {
         $this->id = $id;
-        $this->pengumuman = Pengumuman::$pengumumanList[$id] ?? null;
+        $this->pengumuman = Pengumuman::find($id);
     }
 
     public function render()
