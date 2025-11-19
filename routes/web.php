@@ -12,6 +12,9 @@ use App\Livewire\LandingPage\LihatBerita;
 use App\Livewire\LandingPage\LihatLayanan;
 use App\Livewire\LandingPage\LihatSemuaBerita;
 use App\Livewire\LandingPage\Kontak;
+use App\Livewire\Auth\Login;
+
+Route::get('/login', Login::class)->name('login');
 
 Route::get('/', Profile::class)->name('landingpage.profile');
 
