@@ -3,6 +3,7 @@
 namespace App\Livewire\LandingPage;
 
 use Livewire\Component;
+use App\Models\Pengumuman as PengumumanModel;
 
 class LihatPengumuman extends Component
 {
@@ -12,7 +13,7 @@ class LihatPengumuman extends Component
     public function mount($id)
     {
         $this->id = $id;
-        $this->pengumuman = Pengumuman::find($id);
+        $this->pengumuman = PengumumanModel::find($id);
     }
 
     public function render()
