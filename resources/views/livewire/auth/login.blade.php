@@ -26,7 +26,7 @@
         <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white">
             <div class="text-center mb-8">
                 <div class="flex justify-center items-center gap-2 mb-4">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Universitas_Riau_Logo.png/1200px-Universitas_Riau_Logo.png" alt="UNRI Logo" class="h-10 w-10 object-contain">
+                     <img src="{{ asset('img/logo-klinik.png') }}" alt="UNRI Logo" class="h-10 w-10 object-contain">
                      <div class="text-left">
                          <h3 class="text-green-700 font-bold text-lg leading-none">UNRI</h3>
                          <p class="text-green-600 text-sm font-medium leading-none">Klinik</p>
