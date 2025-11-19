@@ -16,6 +16,12 @@ use App\Livewire\Auth\Login;
 
 Route::get('/login', Login::class)->name('login');
 
+Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/pengumuman', \App\Livewire\Admin\Pengumuman\Index::class)->name('pengumuman.index');
+    Route::get('/pengumuman/tambah', \App\Livewire\Admin\Pengumuman\Create::class)->name('pengumuman.create');
+    Route::get('/pengumuman/{id}/edit', \App\Livewire\Admin\Pengumuman\Edit::class)->name('pengumuman.edit');
+});
+
 Route::get('/', Profile::class)->name('landingpage.profile');
 
 Route::get('/pengumuman', Pengumuman::class)->name('landingpage.pengumuman');
