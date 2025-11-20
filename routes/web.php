@@ -20,6 +20,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/pengumuman', \App\Livewire\Admin\Pengumuman\Index::class)->name('pengumuman.index');
     Route::get('/pengumuman/tambah', \App\Livewire\Admin\Pengumuman\Create::class)->name('pengumuman.create');
     Route::get('/pengumuman/{id}/edit', \App\Livewire\Admin\Pengumuman\Edit::class)->name('pengumuman.edit');
+
+    Route::get('/berita', \App\Livewire\Admin\Berita\Index::class)->name('berita.index');
+    Route::get('/berita/tambah', \App\Livewire\Admin\Berita\Create::class)->name('berita.create');
+    Route::get('/berita/{id}/edit', \App\Livewire\Admin\Berita\Edit::class)->name('berita.edit');
 });
 
 Route::get('/', Profile::class)->name('landingpage.profile');
