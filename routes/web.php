@@ -28,6 +28,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/profile', \App\Livewire\Admin\Profile\Index::class)->name('profile.index');
     Route::get('/profile/tambah', \App\Livewire\Admin\Profile\Create::class)->name('profile.create');
     Route::get('/profile/{id}/edit', \App\Livewire\Admin\Profile\Edit::class)->name('profile.edit');
+
+    Route::get('/layanan', \App\Livewire\Admin\Layanan\Index::class)->name('layanan.index');
+    Route::get('/layanan/tambah', \App\Livewire\Admin\Layanan\Create::class)->name('layanan.create');
+    Route::get('/layanan/{id}/edit', \App\Livewire\Admin\Layanan\Edit::class)->name('layanan.edit');
 });
 
 Route::get('/', Profile::class)->name('landingpage.profile');

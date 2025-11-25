@@ -40,7 +40,8 @@
             <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition">
                 Jadwal Dokter
             </a>
-            <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+            <a href="{{ route('admin.layanan.index') }}"
+                class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition {{ request()->routeIs('admin.layanan*') ? 'bg-gray-700 underline decoration-white decoration-2 underline-offset-4' : '' }}">
                 Layanan
             </a>
             <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition">
