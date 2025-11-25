@@ -25,7 +25,7 @@ class Login extends Component
         if (Auth::attempt(['username' => $this->username, 'password' => $this->password], $this->remember)) {
             session()->regenerate();
 
-            return $this->redirectIntended(default: route('landingpage.profile'), navigate: true);
+            return $this->redirectIntended(default: route('admin.index'), navigate: true);
         }
 
         $this->addError('username', 'The provided credentials do not match our records.');

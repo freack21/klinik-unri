@@ -1,22 +1,25 @@
 <?php
 
-use App\Livewire\LandingPage\Home;
-use App\Livewire\LandingPage\LihatPengumuman;
-use App\Livewire\LandingPage\Pengumuman;
-use App\Livewire\LandingPage\Profile;
-use Illuminate\Support\Facades\Route;
+use App\Livewire\Auth\Login;
 use App\Livewire\LandingPage\Berita;
 use App\Livewire\LandingPage\JadwalDokter;
+use App\Livewire\LandingPage\Kontak;
 use App\Livewire\LandingPage\Layanan;
 use App\Livewire\LandingPage\LihatBerita;
 use App\Livewire\LandingPage\LihatLayanan;
+use App\Livewire\LandingPage\LihatPengumuman;
 use App\Livewire\LandingPage\LihatSemuaBerita;
-use App\Livewire\LandingPage\Kontak;
-use App\Livewire\Auth\Login;
+use App\Livewire\LandingPage\Pengumuman;
+use App\Livewire\LandingPage\Profile;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/login', Login::class)->name('login');
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () {
+        return redirect()->route('admin.profile.index');
+    })->name('index');
+
     Route::get('/pengumuman', \App\Livewire\Admin\Pengumuman\Index::class)->name('pengumuman.index');
     Route::get('/pengumuman/tambah', \App\Livewire\Admin\Pengumuman\Create::class)->name('pengumuman.create');
     Route::get('/pengumuman/{id}/edit', \App\Livewire\Admin\Pengumuman\Edit::class)->name('pengumuman.edit');
