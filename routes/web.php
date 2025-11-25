@@ -36,6 +36,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/kontak', \App\Livewire\Admin\Kontak\Index::class)->name('kontak.index');
     Route::get('/kontak/tambah', \App\Livewire\Admin\Kontak\Create::class)->name('kontak.create');
     Route::get('/kontak/{id}/edit', \App\Livewire\Admin\Kontak\Edit::class)->name('kontak.edit');
+
+    Route::get('/dokter', \App\Livewire\Admin\Dokter\Index::class)->name('dokter.index');
+    Route::get('/dokter/tambah', \App\Livewire\Admin\Dokter\Create::class)->name('dokter.create');
+    Route::get('/dokter/{id}/edit', \App\Livewire\Admin\Dokter\Edit::class)->name('dokter.edit');
 });
 
 Route::get('/', Profile::class)->name('landingpage.profile');

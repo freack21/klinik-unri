@@ -37,7 +37,8 @@
                 class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition {{ request()->routeIs('admin.berita*') ? 'bg-gray-700 underline decoration-white decoration-2 underline-offset-4' : '' }}">
                 Berita
             </a>
-            <a href="#" class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+            <a href="{{ route('admin.dokter.index') }}"
+                class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition {{ request()->routeIs('admin.dokter*') ? 'bg-gray-700 underline decoration-white decoration-2 underline-offset-4' : '' }}">
                 Jadwal Dokter
             </a>
             <a href="{{ route('admin.layanan.index') }}"
