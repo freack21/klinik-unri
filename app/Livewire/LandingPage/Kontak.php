@@ -2,6 +2,7 @@
 
 namespace App\Livewire\LandingPage;
 
+use App\Models\Kontak as KontakModel;
 use Livewire\Component;
 
 class Kontak extends Component
@@ -47,7 +48,10 @@ class Kontak extends Component
 
     public function render()
     {
-        return view('livewire.landing-page.kontak');
+        $kontak = KontakModel::first();
+        return view('livewire.landing-page.kontak', [
+            'kontak' => $kontak
+        ]);
     }
 }
 

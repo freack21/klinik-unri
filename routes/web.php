@@ -32,6 +32,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/layanan', \App\Livewire\Admin\Layanan\Index::class)->name('layanan.index');
     Route::get('/layanan/tambah', \App\Livewire\Admin\Layanan\Create::class)->name('layanan.create');
     Route::get('/layanan/{id}/edit', \App\Livewire\Admin\Layanan\Edit::class)->name('layanan.edit');
+
+    Route::get('/kontak', \App\Livewire\Admin\Kontak\Index::class)->name('kontak.index');
+    Route::get('/kontak/tambah', \App\Livewire\Admin\Kontak\Create::class)->name('kontak.create');
+    Route::get('/kontak/{id}/edit', \App\Livewire\Admin\Kontak\Edit::class)->name('kontak.edit');
 });
 
 Route::get('/', Profile::class)->name('landingpage.profile');

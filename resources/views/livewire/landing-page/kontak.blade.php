@@ -21,37 +21,37 @@
                 {{-- Waktu Pelayanan --}}
                 <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex justify-center mb-4">
-                        <x-heroicon-s-clock class="w-10 h-10 text-teal-600"/>
+                        <x-heroicon-s-clock class="w-10 h-10 text-teal-600" />
                     </div>
                     <h3 class="font-semibold text-lg text-gray-800 mb-2">Waktu Pelayanan</h3>
-                    <p class="text-gray-700">Senin – Jumat<br>08:00 - 16:00</p>
+                    <p class="text-gray-700">{{ $kontak->service_hours ?? 'Senin – Jumat 08:00 - 16:00' }}</p>
                 </div>
 
                 {{-- Telepon --}}
                 <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex justify-center mb-4">
-                        <x-heroicon-s-phone class="w-10 h-10 text-teal-600"/>
+                        <x-heroicon-s-phone class="w-10 h-10 text-teal-600" />
                     </div>
                     <h3 class="font-semibold text-lg text-gray-800 mb-2">Telepon</h3>
-                    <p class="text-gray-700">082214301418</p>
+                    <p class="text-gray-700">{{ $kontak->phone ?? '082214301418' }}</p>
                 </div>
 
                 {{-- WhatsApp --}}
                 <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex justify-center mb-4">
-                        <x-heroicon-s-chat-bubble-left-right class="w-10 h-10 text-teal-600"/>
+                        <x-heroicon-s-chat-bubble-left-right class="w-10 h-10 text-teal-600" />
                     </div>
                     <h3 class="font-semibold text-lg text-gray-800 mb-2">WhatsApp</h3>
-                    <p class="text-gray-700">087789760632</p>
+                    <p class="text-gray-700">{{ $kontak->whatsapp ?? '087789760632' }}</p>
                 </div>
 
                 {{-- Email --}}
                 <div class="bg-[#F1FAF9] shadow-md p-8 rounded-xl text-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex justify-center mb-4">
-                        <x-heroicon-s-envelope class="w-10 h-10 text-teal-600"/>
+                        <x-heroicon-s-envelope class="w-10 h-10 text-teal-600" />
                     </div>
                     <h3 class="font-semibold text-lg text-gray-800 mb-2">Email</h3>
-                    <p class="text-gray-700">abcd@unri.ac.id</p>
+                    <p class="text-gray-700">{{ $kontak->email ?? 'abcd@unri.ac.id' }}</p>
                 </div>
 
             </div>
@@ -59,12 +59,8 @@
             {{-- KANAN – MAP --}}
             <div data-aos="fade-left" data-aos-delay="200">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6584847896!2d101.35824631475395!3d0.4637899997396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a8f3e1e1e1e1%3A0x1e1e1e1e1e1e1e1e!2sUniversitas%20Riau!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid"
-                    width="100%"
-                    height="450"
-                    class="rounded-xl shadow-lg"
-                    style="border:0;"
-                    loading="lazy"
+                    src="{{ $kontak->map_embed_url ?? 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6584847896!2d101.35824631475395!3d0.4637899997396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a8f3e1e1e1e1%3A0x1e1e1e1e1e1e1e1e!2sUniversitas%20Riau!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid' }}"
+                    width="100%" height="450" class="rounded-xl shadow-lg" style="border:0;" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
