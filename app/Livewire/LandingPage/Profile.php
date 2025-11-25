@@ -2,12 +2,16 @@
 
 namespace App\Livewire\LandingPage;
 
+use App\Models\Profile as ProfileModel;
 use Livewire\Component;
 
 class Profile extends Component
 {
     public function render()
     {
-        return view('livewire.landing-page.profile');
+        $profile = ProfileModel::first();
+        return view('livewire.landing-page.profile', [
+            'profile' => $profile
+        ]);
     }
 }

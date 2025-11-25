@@ -25,8 +25,8 @@
         </div>
 
         <nav class="flex-1 px-4 space-y-2">
-            <a href="#"
-                class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition {{ request()->routeIs('admin.profile') ? 'bg-gray-700' : '' }}">
+            <a href="{{ route('admin.profile.index') }}"
+                class="block px-4 py-2 rounded-lg hover:bg-gray-700 transition {{ request()->routeIs('admin.profile*') ? 'bg-gray-700 underline decoration-white decoration-2 underline-offset-4' : '' }}">
                 Profile
             </a>
             <a href="{{ route('admin.pengumuman.index') }}"

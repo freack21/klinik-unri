@@ -24,6 +24,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/berita', \App\Livewire\Admin\Berita\Index::class)->name('berita.index');
     Route::get('/berita/tambah', \App\Livewire\Admin\Berita\Create::class)->name('berita.create');
     Route::get('/berita/{id}/edit', \App\Livewire\Admin\Berita\Edit::class)->name('berita.edit');
+
+    Route::get('/profile', \App\Livewire\Admin\Profile\Index::class)->name('profile.index');
+    Route::get('/profile/tambah', \App\Livewire\Admin\Profile\Create::class)->name('profile.create');
+    Route::get('/profile/{id}/edit', \App\Livewire\Admin\Profile\Edit::class)->name('profile.edit');
 });
 
 Route::get('/', Profile::class)->name('landingpage.profile');
