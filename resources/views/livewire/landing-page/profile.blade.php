@@ -126,16 +126,22 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-10" data-aos="fade-up">Berita</h2>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-                @for ($i = 0; $i < 4; $i++)
-                    <div class="bg-white rounded-lg shadow-md p-4 text-left" data-aos="fade-up"
-                        data-aos-delay="{{ $i * 100 }}">
-                        <img src="{{ asset('img/berita.png') }}" alt="Berita" class="rounded-lg mb-3">
-                        <span class="text-gray-500 text-xs">18 Oktober 2025</span>
-                        <h3 class="font-semibold text-gray-800 text-sm mt-1">Vaksin Covid-19 Telah Ditemukan</h3>
-                        <p class="text-gray-600 text-xs mt-2">Para peneliti akhirnya berhasil menemukan vaksin Covid-19
-                            yang efektif dalam melawan penyebaran virus corona...</p>
+                @forelse ($berita as $index => $item)
+                    <a href="{{ route('landingpage.lihat-berita', ['id' => $item->id]) }}"
+                        class="bg-white rounded-lg shadow-md p-4 text-left block hover:shadow-lg transition"
+                        data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+                        <img src="{{ asset($item->gambar) }}" alt="{{ $item->judul }}"
+                            class="rounded-lg mb-3 w-full h-40 object-cover">
+                        <span
+                            class="text-gray-500 text-xs">{{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('d F Y') }}</span>
+                        <h3 class="font-semibold text-gray-800 text-sm mt-1">{{ Str::limit($item->judul, 50) }}</h3>
+                        <p class="text-gray-600 text-xs mt-2">{{ Str::limit($item->deskripsi, 100) }}</p>
+                    </a>
+                @empty
+                    <div class="col-span-full text-center py-10 text-gray-500">
+                        Belum ada berita terbaru.
                     </div>
-                @endfor
+                @endforelse
             </div>
 
             <a href="{{ route('landingpage.berita') }}"

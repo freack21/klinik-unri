@@ -10,11 +10,11 @@ class Berita extends Component
 
     public function render()
     {
-        $berita = \App\Models\Berita::all();
+        $berita = \App\Models\Berita::latest('tanggal')->get();
 
         return view('livewire.landing-page.berita', [
-            'headNews' => $berita[0],
-            'latestNews' => array_slice($berita, 1),
+            'headNews' => $berita->first(),
+            'latestNews' => $berita->skip(1),
         ]);
     }
 }

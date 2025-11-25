@@ -8,6 +8,7 @@ use Livewire\Component;
 class JadwalDokter extends Component
 {
     public $selectedDoctorId;
+
     public $doctors;
 
     public function mount()
