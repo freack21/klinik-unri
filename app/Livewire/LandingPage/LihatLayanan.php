@@ -15,10 +15,10 @@ class LihatLayanan extends Component
 
     public function render()
     {
-        $data = array_column(Layanan::$layananList, null, 'id')[$this->id] ?? null;
+        $data = \App\Models\Layanan::find($this->id);
 
         return view('livewire.landing-page.lihat-layanan', [
-            'layanan' => $data
+            'layanan' => $data,
         ]);
     }
 }

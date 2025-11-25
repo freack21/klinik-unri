@@ -7,12 +7,13 @@ use Livewire\Component;
 class LihatBerita extends Component
 {
     public $id;
+
     public $berita;
 
     public function mount($id)
     {
         $this->id = $id;
-        $this->berita = array_column(Berita::$beritaList, null, 'id')[$id] ?? null;
+        $this->berita = \App\Models\Berita::find($this->id);
     }
 
     public function render()
